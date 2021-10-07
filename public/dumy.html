@@ -1,0 +1,311 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div>
+
+                    <a href="#" class="flex items-center">
+                        <p class="font-semibold text-black-500 text-lg hover:text-gray-500
+">
+                            Repozitory
+                        </p>
+                    </a>
+                </div>
+                <!-- Primary Navbar items -->
+            </div>
+            <!-- Secondary Navbar items -->
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+
+            </div>
+        </div>
+    </nav>
+    <!-- Side bar navigation -->
+    <div class="relative min-m-screen md:flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white-800 border-2  text-blue-500 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+
+            <!-- logo -->
+            <a href="#" class="text-blue-500 flex items-center space-x-4 px-4">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+                <span class="text-2xl font-extrabold">Antler</span>
+            </a>
+            <nav data-dev-hint="main navigation">
+                <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span class="text-xs">Dashboard</span>
+                </a>
+                <nav data-dev-hint="main navigation">
+                    <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                        <img src="person_outline_black_24dp.svg" alt="" class="h-4 w-4">
+                        <span class="text-xs">People</span>
+                    </a>
+                    <nav data-dev-hint="main navigation">
+                        <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="text-xs">Rub Payroll</span>
+                        </a>
+                        <nav data-dev-hint="main navigation">
+                            <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                                <img src="flight_black_24dp.svg" alt="" class="h-4 w-4">
+                                <span class="text-xs">Termination</span>
+                            </a>
+                            <nav data-dev-hint="main navigation">
+                                <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                                        <path stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="text-xs">Payroll Calender</span>
+                                </a>
+                                <nav data-dev-hint="main navigation">
+                                    <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                                            <path stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span class="text-xs">Time Tracking</span>
+                                    </a>
+                                    <nav data-dev-hint="main navigation">
+                                        <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                                                <path stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            <span class="text-xs">Reports</span>
+                                        </a>
+                                        <nav data-dev-hint="main navigation">
+                                            <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                </svg>
+                                                <span class="text-xs">Policies</span>
+                                            </a>
+                                            <nav data-dev-hint="main navigation">
+                                                <a href="#" class="flex items-center space-x-2 py-4 px-6 transition duration-200 hover:bg-gray-700 hover:text-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="black">
+                                                        <path stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                                                    </svg>
+                                                    <span class="text-xs"> Payroll Network</span>
+                                                </a>
+
+        </div>
+
+
+        <!-- Main Screen Grids -->
+
+
+        <div class="min-h-screen flex items-center bg-gray-100">
+            <div class="flex-1 max-w-4xl mx-auto p-10">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 grid-flow-row-dense">
+                    <div class="bg-white col-span-2 rounded-lg shadow-xl">
+                        <div class="h-24 py-4">
+                            <table class="table-auto ">
+                                <thead>
+                                    <tr>
+                                        <th>Payment Date</th>
+                                        <th>Total Employees</th>
+                                        <th>Working Days</th>
+                                        <th>Net Pay</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>31/05/2021</td>
+                                        <td>140</td>
+                                        <td>24</td>
+                                        <td>$3,40,000.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Second grid  -->
+                    <div class="bg-white col-start-1 col-span-2 row-start-2 row-span-4  rounded-lg shadow-xl">
+                        <div class="h-24">
+                            <div class="shadow-lg rounded-lg overflow-hidden">
+                                <div class="py-3 px-5 bg-gray-50">
+                                    Bar chart
+                                </div>
+                                <canvas class="p-10 " id="chartBar"></canvas>
+                            </div>
+
+                            <!-- Required chart.js -->
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <!-- Chart bar -->
+                            <script>
+                                const labelsBarChart = [
+                                    'January',
+                                    'February',
+                                    'March',
+                                    'April',
+                                    'May',
+                                    'June',
+                                    'January ',
+                                    'February',
+                                    'March',
+                                    'April',
+                                    'May',
+                                    'June'
+                                ];
+                                const dataBarChart = {
+                                    labels: labelsBarChart,
+                                    datasets: [{
+                                        label: 'My First dataset',
+                                        backgroundColor: 'hsl(252, 82.9%, 67.8%)',
+                                        borderColor: 'hsl(252, 82.9%, 67.8%)',
+                                        data: [0, 10, 5, 2, 20, 30, 45, 100, 56, 78, 65, 34, 87, 3],
+                                    }]
+                                };
+
+                                const configBarChart = {
+                                    type: 'bar',
+                                    data: dataBarChart,
+                                    options: {}
+                                };
+
+
+                                var chartBar = new Chart(
+                                    document.getElementById('chartBar'),
+                                    configBarChart
+                                );
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Third grid -->
+                    <div class="bg-white row-start-6 col-span-2 rounded-lg shadow-xl">
+                        <div class="h-24">
+                            <table class="table-auto">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Views</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Intro to CSS</td>
+                                        <td>Adam</td>
+                                        <td>858</td>
+                                    </tr>
+                                    <tr class="bg-emerald-200">
+                                        <td>A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact on Design</td>
+                                        <td>Adam</td>
+                                        <td>112</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intro to JavaScript</td>
+                                        <td>Chris</td>
+                                        <td>1,280</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bg-white col-span-2 rounded-lg shadow-xl">
+                        <div class="h-24"></div>
+                    </div>
+                    <div class="bg-white row-start-2 col-span-2 rounded-lg shadow-xl">
+                        <div class="h-24"></div>
+                    </div>
+                    <div class="bg-white col-span-2 rounded-lg shadow-xl">
+                        <div class="h-24"></div>
+                    </div>
+
+                    <!-- Seventh grid -->
+                    <div class="bg-white col-span-2 rounded-lg shadow-xl">
+                        <div class="h-54">
+                            <div class="shadow-lg rounded-lg overflow-hidden">
+                            </div>
+                            <canvas id="chartDoughnut"></canvas>
+                        </div>
+
+                        <!-- Required chart.js -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <!-- Chart doughnut -->
+                        <script>
+                            const dataDoughnut = {
+                                labels: [
+                                    'JavaScript',
+                                    'Python',
+                                    'Ruby'
+                                ],
+                                datasets: [{
+                                    label: 'My First Dataset',
+                                    data: [300, 50, 100],
+                                    backgroundColor: [
+                                        'rgb(133, 105, 241)',
+                                        'rgb(164, 101, 241)',
+                                        'rgb(101, 143, 241)'
+                                    ],
+                                    hoverOffset: 4
+                                }]
+                            };
+
+                            const configDoughnut = {
+                                type: 'doughnut',
+                                data: dataDoughnut,
+                                options: {}
+                            };
+
+
+                            var chartBar = new Chart(
+                                document.getElementById('chartDoughnut'),
+                                configDoughnut
+                            );
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

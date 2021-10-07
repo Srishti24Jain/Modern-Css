@@ -1,0 +1,286 @@
+<%- include("header") -%>
+
+    <!-- MAIN Table Screen -->
+
+    <div class="max-w-5xl py-8 sm:px-6 bg-gray-100">
+
+        <!-- <div class="absolute top-0 right-0 pt-4">
+            <input class="w-1/2 rounded ml-1 border-2" type="text" placeholder="Search...">
+            <button class="bg-grey-lightest border-grey border-l shadow hover:bg-grey-lightest h-6 w-6">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+</svg>
+      </button>
+
+
+        </div> -->
+        <div class="px-4 md:px-10 py-4  bg-gray-100 rounded-tl-lg rounded-tr-lg">
+            <div class="flex justify-end items-center">
+                <div class="relative pb-4 ">
+                    <div class="absolute top-4 left-3 "> <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500 "></i> </div> <input type="text" id="myInput" onkeyup="myFunction()" class="h-14 w-96 pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none" placeholder="Search anything...">
+                    <div class="absolute top-2 right-2"> <button class="h-10 w-20 text-white rounded-lg bg-indigo-600 hover:bg-red-600">Search</button> </div>
+                </div>
+            </div>
+            <div class="sm:flex items-center justify-between">
+                <p tabindex="0" class="focus:outline-none text-base sm:text-lg text-blue-500">Employee </p>
+                <p tabindex="0" class="focus:outline-none text-base sm:text-lg text-gray-500">Contractor</p>
+                <div>
+                    <button class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded" onclick="location.href='/form'">
+                        <p class="text-sm font-medium leading-none text-white">+Add Employee</p>
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
+            <% if(details!=null) { %>
+                <table class="w-full whitespace-nowrap" id="myTable">
+                    <thead>
+                        <tr tabindex="0" class="focus:outline-none h-16 bg-gray-50 w-full text-sm leading-none text-gray-800">
+                            <th class="font-normal text-left pl-4">Employee Name</th>
+                            <th class="font-normal text-left pl-12">Email</th>
+                            <th class="font-normal text-left pl-12">Mobile</th>
+                            <th class="font-normal text-left pl-20">Join Date</th>
+                            <th class="font-normal text-left pl-20">Role</th>
+                            <th class="font-normal text-left pl-20">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="w-full">
+                        <% details.forEach(function(item){ %>
+                            <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                                <td class="pl-4 cursor-pointer">
+                                    <div class="flex items-center">
+                                        <!-- <div class="w-10 h-10">
+                                            <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/olympus/projects.png" alt="UX Design and Visual Strategy" />
+                                        </div> -->
+                                        <div class="pl-4">
+                                            <p class="font-medium">
+                                                <%= item.fName%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="pl-12">
+                                    <p class="font-medium">
+                                        <%= item.email%>
+                                    </p>
+
+                                </td>
+                                <td class="pl-20">
+                                    <p class="font-medium">
+                                        <%= item.city%>
+                                    </p>
+
+                                </td>
+                                <td class="pl-20">
+                                    <p class="font-medium">
+                                        <%= item.dat.toDateString()%>
+                                    </p>
+                                </td>
+                                <td class="pl-20">
+                                    <p class="text-sm font-large leading-none text-gray-800">
+                                        <%= item.des%>
+                                    </p>
+
+
+                                </td>
+                            </tr>
+                            <% }) %>
+                </table>
+                <% } %>
+                    <!-- <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                            <td class="pl-4 cursor-pointer">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10"> 
+                        <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/olympus/projects.png" alt="UX Design and Visual Strategy" />
+        </div>
+        <div class="pl-4">
+            <p class="font-medium">Jane Cooper</p>
+        </div>
+    </div>
+    </td>
+    <td class="pl-12">
+        <p class="text-sm font-medium leading-none text-gray-800">wwh@gai.com</p>
+
+    </td>
+    <td class="pl-12">
+        <p class="font-medium">32470939</p>
+
+    </td>
+    <td class="pl-20">
+        <p class="font-medium">17 Oct,2021</p>
+
+    </td>
+    <td class="pl-20">
+        <p class="font-medium">Web Developer</p>
+    </td>
+    <td class="pl-20">
+        <p class="text-sm font-large leading-none text-gray-800">...</p>
+
+
+    </td>
+    </tr>
+    <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+        <td class="pl-4 cursor-pointer">
+            <div class="flex items-center">
+                <div class="w-10 h-10">
+                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/olympus/projects.png" alt="UX Design and Visual Strategy" />
+                </div>
+                <div class="pl-4">
+                    <p class="font-medium">Jane Cooper</p>
+                </div>
+            </div>
+        </td>
+        <td class="pl-12">
+            <p class="text-sm font-medium leading-none text-gray-800">wwh@gai.com</p>
+
+        </td>
+        <td class="pl-12">
+            <p class="font-medium">32470939</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">17 Oct,2021</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">Web Developer</p>
+        </td>
+        <td class="pl-20">
+            <p class="text-sm font-large leading-none text-gray-800">...</p>
+
+
+        </td>
+    </tr>
+    <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+        <td class="pl-4 cursor-pointer">
+            <div class="flex items-center">
+                <div class="w-10 h-10">
+                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/olympus/projects.png" alt="UX Design and Visual Strategy" />
+                </div>
+                <div class="pl-4">
+                    <p class="font-medium">Jane Cooper</p>
+                </div>
+            </div>
+        </td>
+        <td class="pl-12">
+            <p class="text-sm font-medium leading-none text-gray-800">wwh@gai.com</p>
+
+        </td>
+        <td class="pl-12">
+            <p class="font-medium">32470939</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">17 Oct,2021</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">Web Developer</p>
+        </td>
+        <td class="pl-20">
+            <p class="text-sm font-large leading-none text-gray-800">...</p>
+
+
+        </td>
+    </tr>
+    <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+        <td class="pl-4 cursor-pointer">
+            <div class="flex items-center">
+                <div class="w-10 h-10">
+                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/olympus/projects.png" alt="UX Design and Visual Strategy" />
+                </div>
+                <div class="pl-4">
+                    <p class="font-medium">Jane Cooper</p>
+                </div>
+            </div>
+        </td>
+        <td class="pl-12">
+            <p class="text-sm font-medium leading-none text-gray-800">wwh@gai.com</p>
+
+        </td>
+        <td class="pl-12">
+            <p class="font-medium">32470939</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">17 Oct,2021</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">Web Developer</p>
+        </td>
+        <td class="pl-20">
+            <p class="text-sm font-large leading-none text-gray-800">...</p>
+
+
+        </td>
+    </tr>
+    <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+        <td class="pl-4 cursor-pointer">
+            <div class="flex items-center">
+                <div class="w-10 h-10">
+                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/olympus/projects.png" alt="UX Design and Visual Strategy" />
+                </div>
+                <div class="pl-4">
+                    <p class="font-medium">Jane Cooper</p>
+                </div>
+            </div>
+        </td>
+        <td class="pl-12">
+            <p class="text-sm font-medium leading-none text-gray-800">wwh@gai.com</p>
+
+        </td>
+        <td class="pl-12">
+            <p class="font-medium">32470939</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">17 Oct,2021</p>
+
+        </td>
+        <td class="pl-20">
+            <p class="font-medium">Web Developer</p>
+        </td>
+        <td class="pl-20">
+            <p class="text-sm font-large leading-none text-gray-800">...</p>
+
+
+        </td>
+    </tr> -->
+
+                    <%- include("pagination") -%>
+        </div>
+    </div>
+
+<!-- Scripttt ssss -->
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+
+
+
+
+    </body>
+
+    </html>
